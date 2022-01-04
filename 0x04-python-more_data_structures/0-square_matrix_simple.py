@@ -1,2 +1,5 @@
 def square_matrix_simple(matrix=[]):
-    return ([[(x**2) for x in fila] for fila in matrix])
+    s = []  # sera la nueva matriz
+    for i in matrix:
+        s.append(list(map(lambda x: x**2, i)))
+    return s
