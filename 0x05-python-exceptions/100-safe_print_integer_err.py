@@ -5,7 +5,7 @@ def safe_print_integer_err(value):
         print("{:d}".format(value))
         return True
     except TypeError:
-        print("Exception: can only concatenate str (not "int") to str", file=sys.stderr)
+        print('Exception: can only concatenate str (not "int") to str', file=sys.stderr)
         return False
     except ValueError:
         print("Exception: Unknown format code 'd' for object of type 'str'", file=sys.stderr)
