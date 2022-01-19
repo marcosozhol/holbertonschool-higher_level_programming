@@ -1,8 +1,11 @@
 #!/usr/bin/python3
 class Square:
+    
+
     """
     Create a Square class
     """
+
     def __init__(self, size):
         """
         Private instance attribute: size.
