@@ -11,12 +11,6 @@ class Square:
         Private instance attribute: size.
         Instantiation with size (no type/value verification).
         """
-        if(type(size) != int):
-            raise TypeError("size must be an integer", end="")
-
-        if(size < 0):
-            raise ValueError("size must be >= 0", end="")
-
         self.__size = size
         self.__position = position
 
@@ -34,10 +28,8 @@ class Square:
         """must be an integer and > 0"""
         if(type(value) != int):
             raise TypeError("size must be an integer")
-
         if(value < 0):
             raise ValueError("size must be >= 0")
-
         self.__size = value
 
     def my_print(self):
@@ -65,7 +57,7 @@ class Square:
     @position.setter
     def position(self, value):
         """position setter"""
-        if(type(position) != tuple):
+        if(type(position) != tuple or len(position != 2)):
             raise TypeError("position must be a tuple of 2 positive integers")
         if((type(position[0]) != int) or (type(position[1]) != int)):
             raise TypeError("position must be a tuple of 2 positive integers")
