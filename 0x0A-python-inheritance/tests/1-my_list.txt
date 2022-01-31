@@ -1,0 +1,30 @@
+"""
+test para ejercicio 1
+
+"""
+""" Import function """
+>>> MyList = __import__('1-my_list').MyList
+
+>>> my_list = MyList()
+>>> my_list.append(6)
+>>> my_list.append(8)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(11)
+>>> my_list.print_sorted()
+[2, 3, 6, 8, 11]
+
+>>> print(my_list)
+[6, 8, 2, 3, 11]
+
+>>> my_list = MyList("holberton")
+>>> print(my_list)
+['h', 'o', 'l', 'b', 'e', 'r', 't', 'o', 'n']
+>>> my_list.print_sorted()
+['b', 'e', 'h', 'l', 'n', 'o', 'o', 'r', 't']
+
+>>> my_list = MyList([24, 6, 9, 13])
+>>> print(my_list)
+[24, 6, 9, 13]
+>>> my_list.print_sorted()
+[6, 9, 13, 24]
