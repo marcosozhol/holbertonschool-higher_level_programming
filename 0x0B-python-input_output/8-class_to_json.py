@@ -1,7 +1,7 @@
 #!/usr/python3
-""" Module """
+"""Module"""
 
 
 def class_to_json(obj):
-    """ returns the dictionary """
+    """returns the dictionary"""
     return obj.__dict__
