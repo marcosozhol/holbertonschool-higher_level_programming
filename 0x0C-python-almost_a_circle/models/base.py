@@ -33,3 +33,12 @@ class Base:
                 list_objs_tmp.append(cls.to_dictionary(i))
         with open(filename, 'w') as f:
             f.write(cls.to_json_string(list_objs_tmp))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """ Return the list of the JSON string """
+        empty_list = []
+        if json_string is None or len(json_string) == 0:
+            return empty_list
+        else:
+            return json.loads(json_string)
