@@ -73,14 +73,13 @@ class Rectangle(Base):
     def display(self):
         """ Instance for print a rectangle """
         print(("\n" * self.__y) +
-                "\n".join(((" " * self.__x) +
-                    ("#" * self.__width))for i in range(self.__height)))
-
+              "\n".join(((" " * self.__x) + ("#" * self.__width))
+                        for i in range(self.__height)))
 
     def __str__(self):
         """ Instance for overriding the str method """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
-                self.id, self.x, self.y, self.width, self.height)
+            self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args, **kwargs):
         """ Instance for assigns an argument """
