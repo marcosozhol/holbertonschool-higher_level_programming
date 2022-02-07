@@ -39,7 +39,7 @@ class Square(Rectangle):
                 elif index == 2:
                     self.x = value
                 elif index == 3:
-                    self.y == value
+                    self.y = value
         else:
             if "id" in kwargs:
                 self.id = kwargs["id"]
