@@ -1,8 +1,15 @@
 #!/usr/bin/python3
-"""lists all states from the database hbtn_0e_0_usa"""
+"""
+lists all states with a name starting with N
+(upper N) from the database hbtn_0e_0_usa
+"""
 
 
 if __name__ == '__main__':
+    """
+    Results must be sorted in ascending order by states.id
+    Results must be displayed as they are in the example below
+    """
     import MySQLdb
     import sys
 
