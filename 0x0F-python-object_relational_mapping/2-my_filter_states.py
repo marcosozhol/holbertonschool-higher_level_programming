@@ -1,29 +1,29 @@
 #!/usr/bin/python3
 """
-In an argument and displays all values
-in the states table of hbtn_0e_0_usa where
-name matches the argument.
+Script that takes in an argument and displays all values
+in the states table of hbtn_0e_0_usa where name matches the argument
 """
 
-import MySQLdb
 import sys
+import MySQLdb
 
 if __name__ == "__main__":
-    """
-    arguments: mysql username, mysql password, database name
+    """4 arguments: mysql username, mysql password, database name
     and state name searched
     """
+    server = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
+                                  passwd=sys.argv[2], database=sys.argv[3])
 
-    db = MySQLdb.connect(host="localhost", port=3306,
-                         user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
+    curs = server.cursor()
 
-    cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE BINARY '{}'\
-            ORDER BY state.id ASC".format(sys.argv[4]))
-    rows = cur.fetchall()
-    for row in rows:
+    curs.execute("SELECT * FROM states WHERE name = '{}' ORDER BY id ASC"
+                 .format(sys.argv[4]))
+
+    column = curs.fetchall()
+
+    for row in column:
         if row[1] == sys.argv[4]:
             print(row)
 
-    cur.close()
-    db.close()
+    curs.close()
+    server.close()
