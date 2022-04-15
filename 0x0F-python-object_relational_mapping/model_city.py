@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""contains the class definition of a City"""
+"""contains the class
+definition of a City"""
 
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, ForeignKey
