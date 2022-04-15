@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-#Lists all State objects that contain the letter a
-# from the database hbtn_0e_6_usa.
-# Usage: ./9-model_state_filter_a.py <mysql username> /
-#                                    <mysql password> /
-#                                    <database name>
-
+"""
+lists all State objects that
+contain the letter a from the
+database hbtn_0e_6_usa:
+take 3 arguments: mysql username,
+mysql password and database name
+"""
 
 import sys
 from sqlalchemy import create_engine
