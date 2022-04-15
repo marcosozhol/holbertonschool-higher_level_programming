@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     found = False
     for state in session.query(State):
-        if state.name = sys.argv[4]:
+        if state.name == sys.argv[4]:
             print("{}".format(state.id))
             found = True
             break
