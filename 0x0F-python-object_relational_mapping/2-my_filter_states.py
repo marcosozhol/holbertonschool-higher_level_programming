@@ -11,7 +11,7 @@ import sys
 if __name__ == "__main__":
     """
     arguments: mysql username, mysql password, database name
-    and state name searched
+    and state name searched.
     """
 
     db = MySQLdb.connect(host="localhost", port=3306,
