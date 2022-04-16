@@ -16,8 +16,8 @@ if __name__ == "__main__":
                            .format(sys.argv[1], sys.argv[2],
                                    sys.argv[3]), pool_pre_ping=True)
     Base.metadata.create_all(engine)
-
-    session = Session(engine)
+    Session = sessionmaker(bind=engine)
+    session = Session()
     first = session.query(State).order_by(State.id).first()
     if first:
         print("{}: {}".format(first.id, first.name))
