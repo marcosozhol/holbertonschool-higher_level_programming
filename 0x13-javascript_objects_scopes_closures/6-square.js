@@ -2,9 +2,9 @@
 
 // Square that defines a square and inherits from Rectangle
 
-const square = require('./5-square');
+const Rectangle = require('./5-square');
 
-class Square extends square {
+class Square extends Rectangle {
   charPrint (c) {
     if (c === undefined) {
       console.log(('X'.repeat(this.width) + '\n').repeat(this.height - 1) + 'X'.repeat(this.width));
