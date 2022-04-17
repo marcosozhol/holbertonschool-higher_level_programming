@@ -8,6 +8,6 @@ class Square extends square {
       } else {
         console.log((c.repeat(this.width) + '\n').repeat(this.height - 1) + c.repeat(this.width));
       }
-    }
   }
+}
 module.exports = Square;
