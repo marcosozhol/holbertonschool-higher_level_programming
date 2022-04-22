@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-# task 0
+# takes in a URL and displays the size
+curl -i 0.0.0.0:5000 | grep "Content-Length"
