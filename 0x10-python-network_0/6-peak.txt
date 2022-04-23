@@ -1,1 +1,1 @@
-Aquí va la complejidad
+O(log(n))
