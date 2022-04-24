@@ -19,6 +19,6 @@ if __name__ == "__main__":
         q = ""
     request = requests.post('http://0.0.0.0:5000/search_user')
     request_json = request.json
-    print(request)
+    print(request.text)
         
     
