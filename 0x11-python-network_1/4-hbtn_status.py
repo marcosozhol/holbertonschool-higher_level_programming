@@ -9,7 +9,7 @@ You are not allow to import packages other than requests
 if __name__ == "__main__":
     import requests
 
-    response = requests.get("https://intranet.hbtn.io/status")
+    response = requests.get('https://intranet.hbtn.io/status')
 
     print('Body response:')
     print('\t - type: {}'.format(type(response.text)))
