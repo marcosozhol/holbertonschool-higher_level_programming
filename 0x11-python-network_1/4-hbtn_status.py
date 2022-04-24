@@ -9,6 +9,6 @@ You are not allow to import packages other than requests
 import requests
 
 response = requests.get("https://intranet.hbtn.io/status")
-print('Body response:')
-print('\t - type: {}'.format(type(response.text)))
-print('\t - content: {}'.format(response.text))
+    print('Body response:')
+    print('\t - type: {}'.format(type(response.text)))
+    print('\t - content: {}'.format(response.text))
