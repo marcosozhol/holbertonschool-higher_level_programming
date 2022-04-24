@@ -7,9 +7,6 @@ with the letter as a parameter.
 """
 
 
-import json
-
-
 if __name__ == "__main__":
     import requests
     from sys import argv
@@ -19,6 +16,11 @@ if __name__ == "__main__":
         q = ""
     request = requests.post('http://0.0.0.0:5000/search_user')
     request_json = request.json
-    print(request.text)
-        
-    
+    print(request)
+    try:
+        if request_json:
+            print('[{}] {}'.format(request_json['id'], request_json['name']))
+        else:
+            print('No result')
+    except ValueError:
+        print('Not a valid JSON')
