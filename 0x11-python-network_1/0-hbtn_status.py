@@ -2,7 +2,7 @@
 """script that fetches https://intranet.hbtn.io/status"""
     
 
-if name == "__main__":
+if __name___ == "__main__":
     import urllib.request
     
     with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
