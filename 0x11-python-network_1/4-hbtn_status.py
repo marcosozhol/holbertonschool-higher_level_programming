@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """
 script that fetches https://intranet.hbtn.io/status
+You must use the package requests
+You are not allow to import packages other than requests
 """
 
 
