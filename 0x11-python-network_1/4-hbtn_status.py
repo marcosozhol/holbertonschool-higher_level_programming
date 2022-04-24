@@ -7,4 +7,6 @@ script that fetches https://intranet.hbtn.io/status
 import requests
 
 response = requests.get("https://intranet.hbtn.io/status")
-print(response)
+print('Body response:')
+print('\t - type: {}'.format(type(str)))
+print('\t - content: {}'.format(response))
