@@ -15,7 +15,7 @@ if __name__ == "__main__":
         q = sys.argv[1]
     else:
         q = ""
-    request = requests.post('http://0.0.0.0:5000/search_user', data={"q": q})
+    request = requests.post("http://0.0.0.0:5000/search_user", data={"q": q})
     request_json = request.json()
     try:
         if request_json:
