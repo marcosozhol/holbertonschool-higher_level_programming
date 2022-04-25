@@ -19,7 +19,7 @@ if __name__ == "__main__":
     request_json = request.json()
     try:
         if request_json:
-            print('[{}] {}'.format(request_json['id'], request_json['name']))
+            print('[{}] {}'.format(request_json.get['id'], request_json.get['name']))
         else:
             print('No result')
     except ValueError:
