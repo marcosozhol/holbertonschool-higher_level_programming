@@ -9,10 +9,10 @@ with the letter as a parameter.
 
 if __name__ == "__main__":
     import requests
-    from sys import argv
+    import sys
 
-    if len(argv) > 1:
-        q = argv[1]
+    if len(sys.argv) > 1:
+        q = sys.argv[1]
     else:
         q = ""
     request = requests.post('http://0.0.0.0:5000/search_user', data={"q": q})
