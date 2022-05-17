@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/node
 const request = require('request');
 let url = 'https://swapi-api.hbtn.io/api/films/' + ProcessingInstruction.argv[2];
 request(url, function(error, response, body) {
