@@ -1,9 +1,5 @@
 #!/usr/bin/node
-import axios from 'axios';
-status_code = await axios.get(process.argv[2])
-.then(Response => {
-  console.log("code: ", status_code);
-})
-.catch(error => {
-  console.log(error);
+const request = require('request');
+request.get(process.argv[2]).on('response', function (response) {
+  console.log('code: ${response.statusCode}');
 });
